@@ -1,4 +1,4 @@
-file 2559 1626093552                                            
+file 2559 1647516080                                            
 version 2
 run StationaryMobility-0-20210712-21:38:59-11424
 attr configname StationaryMobility
@@ -36,45 +36,44 @@ vector 0 MobileNetwork.host[0] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+0	2452 9 0 0 0 0 1 50 50 50 2500
 vector 1 MobileNetwork.host[0] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+1	2461 10 0 0 0 0 1 200 200 200 40000
 vector 2 MobileNetwork.host[0] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+2	2471 8 0 0 0 0 1 0 0 0 0
 vector 3 MobileNetwork.host[1] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+3	2479 10 0 0 0 0 1 300 300 300 90000
 vector 4 MobileNetwork.host[1] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+4	2489 10 0 0 0 0 1 200 200 200 40000
 vector 5 MobileNetwork.host[1] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+5	2499 8 0 0 0 0 1 0 0 0 0
 vector 6 MobileNetwork.host[2] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+6	2507 22 0 0 0 0 1 361.65802222677 361.65802222677 361.65802222677 130796.52504098
 vector 7 MobileNetwork.host[2] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+7	2529 21 0 0 0 0 1 343.1782479398 343.1782479398 343.1782479398 117771.30985903
 vector 8 MobileNetwork.host[2] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
-0	2452 9 0 0 0 0 1 50 50 50 2500
-1	2461 10 0 0 0 0 1 200 200 200 40000
-2	2471 8 0 0 0 0 1 0 0 0 0
-3	2479 10 0 0 0 0 1 300 300 300 90000
-4	2489 10 0 0 0 0 1 200 200 200 40000
-5	2499 8 0 0 0 0 1 0 0 0 0
-6	2507 22 0 0 0 0 1 361.65802222677 361.65802222677 361.65802222677 130796.52504098
-7	2529 21 0 0 0 0 1 343.1782479398 343.1782479398 343.1782479398 117771.30985903
-8	2550 8 0 0 0 0 1 0 0 0 0
-
+8	2550 9 0 0 0 0 1 0 0 0 0

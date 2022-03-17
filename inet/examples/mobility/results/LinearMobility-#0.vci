@@ -1,4 +1,4 @@
-file 1919 1619589972                                            
+file 1919 1647516080                                            
 version 2
 run LinearMobility-0-20210428-15:06:09-23934
 attr configname LinearMobility
@@ -33,30 +33,29 @@ vector 0 MobileNetwork.host[0] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+0	1815 22 0 0 0 0 1 329.28810138255 329.28810138255 329.28810138255 108430.65371212
 vector 1 MobileNetwork.host[0] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+1	1837 22 0 0 0 0 1 237.13784655556 237.13784655556 237.13784655556 56234.358269008
 vector 2 MobileNetwork.host[0] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+2	1859 8 0 0 0 0 1 0 0 0 0
 vector 3 MobileNetwork.host[1] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+3	1867 22 0 0 0 0 1 361.65802222677 361.65802222677 361.65802222677 130796.52504098
 vector 4 MobileNetwork.host[1] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+4	1889 21 0 0 0 0 1 343.1782479398 343.1782479398 343.1782479398 117771.30985903
 vector 5 MobileNetwork.host[1] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
-0	1815 22 0 0 0 0 1 329.28810138255 329.28810138255 329.28810138255 108430.65371213
-1	1837 22 0 0 0 0 1 237.13784655556 237.13784655556 237.13784655556 56234.358269009
-2	1859 8 0 0 0 0 1 0 0 0 0
-3	1867 22 0 0 0 0 1 361.65802222677 361.65802222677 361.65802222677 130796.52504098
-4	1889 21 0 0 0 0 1 343.1782479398 343.1782479398 343.1782479398 117771.30985903
-5	1910 8 0 0 0 0 1 0 0 0 0
-
+5	1910 9 0 0 0 0 1 0 0 0 0

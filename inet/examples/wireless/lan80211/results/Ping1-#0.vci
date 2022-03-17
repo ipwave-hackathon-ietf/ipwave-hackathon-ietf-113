@@ -1,4 +1,4 @@
-file 6779 1619593312                                            
+file 6779 1647516080                                            
 version 2
 run Ping1-0-20210428-15:45:19-24491
 attr configname Ping1
@@ -47,120 +47,119 @@ vector 0 Lan80211.host[0].wlan[0].radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+0	6144 24 0 0 0 0 3 0 2 2 4
 vector 1 Lan80211.host[0].wlan[0].radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+1	6168 8 0 0 0 0 1 0 0 0 0
 vector 2 Lan80211.host[1].wlan[0].radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+2	6176 46 0 13 0 0.006235636964 4 0 3 5 13
 vector 3 Lan80211.host[1].wlan[0].radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+3	6222 8 0 0 0 0 1 0 0 0 0
 vector 4 Lan80211.ap.wlan[0].radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+4	6230 24 0 0 0 0 3 0 2 2 4
 vector 5 Lan80211.ap.wlan[0].radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+5	6254 8 0 0 0 0 1 0 0 0 0
 vector 6 Lan80211.host[0].wlan[0].radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+6	6262 30 0 16 0 0.006236354723 2 1 3 4 10
 vector 7 Lan80211.host[1].wlan[0].radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+7	6292 30 0 13 0 0.006235636964 2 0 1 1 1
 vector 8 Lan80211.ap.wlan[0].radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+8	6322 30 0 15 0 0.006235989625 2 1 3 4 10
 vector 9 Lan80211.host[0].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+9	6352 8 0 0 0 0 1 7 7 7 49
 vector 10 Lan80211.host[1].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+10	6360 9 0 0 0 0 1 7 7 7 49
 vector 11 Lan80211.ap.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+11	6369 9 0 0 0 0 1 7 7 7 49
 vector 12 Lan80211.host[1].app[0] pingTxSeq:vector ETV
 attr interpolationmode none
 attr title "ping tx seq, vector"
+12	6378 22 6 6 0.006235636964 0.006235636964 1 0 0 0 0
 vector 13 Lan80211.host[1].ipv4.arp arpRequestSent:vector(packetBytes) ETV
 attr source arpRequestSent
 attr title "ARP request sent, vector(packetBytes)"
+13	6400 23 8 8 0.006235636964 0.006235636964 1 28 28 28 784
 vector 14 Lan80211.host[1].wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received from upper layer, vector(packetBytes)"
+14	6423 24 10 10 0.006235636964 0.006235636964 1 36 36 36 1296
 vector 15 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+15	6447 24 10 10 0.006235636964 0.006235636964 1 64 64 64 4096
 vector 16 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+16	6471 46 10 12 0.006235636964 0.006235636964 2 0 1 1 1
 vector 17 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
 attr interpolationmode none
 attr title "backoff periods, vector"
+17	6517 23 10 10 0.006235636964 0.006235636964 1 6 6 6 36
 vector 18 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(backoffStarted)-count(backoffStopped)
 attr title "backoff active, vector"
+18	6540 46 10 11 0.006235636964 0.006235636964 2 0 1 1 1
 vector 19 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+19	6586 24 12 12 0.006235636964 0.006235636964 1 64 64 64 4096
 vector 20 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+20	6610 23 12 12 0.006235636964 0.006235636964 1 0 0 0 0
 vector 21 Lan80211.host[1].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetEnqueued) - count(packetDequeued)"
 attr title "queue length, vector"
+21	6633 23 12 12 0.006235636964 0.006235636964 1 1 1 1 1
 vector 22 Lan80211.host[1].wlan[0].mac.dcf datarateSelected:vector ETV
 attr interpolationmode none
 attr title "datarates selected, vector"
+22	6656 29 12 12 0.006235636964 0.006235636964 1 2000000 2000000 2000000 4000000000000
 vector 23 Lan80211.host[1].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent to lower layer, vector(packetBytes)"
+23	6685 24 12 12 0.006235636964 0.006235636964 1 64 64 64 4096
 vector 24 Lan80211.host[1].wlan[0].mac.dcf frameSequenceActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(frameSequenceStarted)-count(frameSequenceFinished)
 attr title "frame sequence active, vector"
+24	6709 23 12 12 0.006235636964 0.006235636964 1 1 1 1 1
 vector 25 Lan80211.host[1].wlan[0].radio transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "Radio transmission state, vector"
-0	6144 24 0 0 0 0 3 0 2 2 4
-1	6168 8 0 0 0 0 1 0 0 0 0
-2	6176 46 0 13 0 0.006235636964 4 0 3 5 13
-3	6222 8 0 0 0 0 1 0 0 0 0
-4	6230 24 0 0 0 0 3 0 2 2 4
-5	6254 8 0 0 0 0 1 0 0 0 0
-6	6262 30 0 16 0 0.006236354723 2 1 3 4 10
-7	6292 30 0 13 0 0.006235636964 2 0 1 1 1
-8	6322 30 0 15 0 0.006235989625 2 1 3 4 10
-9	6352 8 0 0 0 0 1 7 7 7 49
-10	6360 9 0 0 0 0 1 7 7 7 49
-11	6369 9 0 0 0 0 1 7 7 7 49
-12	6378 22 6 6 0.006235636964 0.006235636964 1 0 0 0 0
-13	6400 23 8 8 0.006235636964 0.006235636964 1 28 28 28 784
-14	6423 24 10 10 0.006235636964 0.006235636964 1 36 36 36 1296
-15	6447 24 10 10 0.006235636964 0.006235636964 1 64 64 64 4096
-16	6471 46 10 12 0.006235636964 0.006235636964 2 0 1 1 1
-17	6517 23 10 10 0.006235636964 0.006235636964 1 6 6 6 36
-18	6540 46 10 11 0.006235636964 0.006235636964 2 0 1 1 1
-19	6586 24 12 12 0.006235636964 0.006235636964 1 64 64 64 4096
-20	6610 23 12 12 0.006235636964 0.006235636964 1 0 0 0 0
-21	6633 23 12 12 0.006235636964 0.006235636964 1 1 1 1 1
-22	6656 29 12 12 0.006235636964 0.006235636964 1 2000000 2000000 2000000 4000000000000
-23	6685 24 12 12 0.006235636964 0.006235636964 1 64 64 64 4096
-24	6709 23 12 12 0.006235636964 0.006235636964 1 1 1 1 1
-25	6732 46 13 14 0.006235636964 0.006235636964 2 1 2 3 5
-
+25	6732 47 13 14 0.006235636964 0.006235636964 2 1 2 3 5

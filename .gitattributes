@@ -9,3 +9,4 @@ h filter=lfs diff=lfs merge=lfs -text
 *.h.gch filter=lfs diff=lfs merge=lfs -text
 *.gch filter=lfs diff=lfs merge=lfs -text
 *.vec filter=lfs diff=lfs merge=lfs -text
+*.vci filter=lfs diff=lfs merge=lfs -text

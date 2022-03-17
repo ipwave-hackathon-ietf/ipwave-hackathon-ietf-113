@@ -1,4 +1,4 @@
-file 19994 1619591912                                           
+file 19994 1647516080                                           
 version 2
 run General-0-20210428-15:37:39-24328
 attr configname General
@@ -36,265 +36,264 @@ vector 0 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio radioMode:vecto
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+0	13729 112 0 66 0 0.281387965107 7 0 3 12 30
 vector 1 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+1	13841 30 0 23 0 0.180829011113 2 0 0 0 0
 vector 2 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+2	13871 288 0 107 0 0.485840561985 15 0 3 32 82
 vector 3 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+3	14159 8 0 0 0 0 1 0 0 0 0
 vector 4 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+4	14167 362 0 108 0 0.485841038982 17 0 3 27 63
 vector 5 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+5	14529 358 0 107 0 0.485840561985 17 0 3 15 27
 vector 6 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+6	14887 9 0 0 0 0 1 31 31 31 961
 vector 7 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+7	14896 9 0 0 0 0 1 31 31 31 961
 vector 8 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+8	14905 137 8 100 0.085794561985 0.485794561985 6 48 48 288 13824
 vector 9 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+9	15042 263 8 102 0.085794561985 0.485794561985 12 0 1 6 6
 vector 10 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
 attr interpolationmode none
 attr title "backoff periods, vector"
+10	15305 140 8 100 0.085794561985 0.485794561985 6 3 21 72 1200
 vector 11 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(backoffStarted)-count(backoffStopped)
 attr title "backoff active, vector"
+11	15445 274 8 101 0.085794561985 0.485794561985 12 0 1 6 6
 vector 12 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+12	15719 144 10 102 0.085794561985 0.485794561985 6 48 48 288 13824
 vector 13 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+13	15863 144 10 102 0.085794561985 0.485794561985 6 0 0.00043 0.00043 1.849e-07
 vector 14 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetEnqueued) - count(packetDequeued)"
 attr title "queue length, vector"
+14	16007 277 10 106 0.085794561985 0.485840561985 12 0 1 6 6
 vector 15 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf datarateSelected:vector ETV
 attr interpolationmode none
 attr title "datarates selected, vector"
+15	16284 180 10 102 0.085794561985 0.485794561985 6 24000000 24000000 144000000 3.456e+15
 vector 16 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent to lower layer, vector(packetBytes)"
+16	16464 144 10 102 0.085794561985 0.485794561985 6 48 48 288 13824
 vector 17 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf frameSequenceActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(frameSequenceStarted)-count(frameSequenceFinished)
 attr title "frame sequence active, vector"
+17	16608 277 10 106 0.085794561985 0.485840561985 12 0 1 6 6
 vector 18 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "Radio transmission state, vector"
+18	16885 552 11 107 0.085794561985 0.485840561985 24 0 2 24 36
 vector 19 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent, vector(packetBytes)"
+19	17437 144 14 106 0.085840561985 0.485840561985 6 48 48 288 13824
 vector 20 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Multicast(packetSentToPeer)
 attr title "packets sent: multicast, vector(packetBytes)"
+20	17581 121 14 106 0.085840561985 0.485840561985 5 48 48 240 11520
 vector 21 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Broadcast(packetSentToPeer)
 attr title "packets sent: broadcast , vector(packetBytes)"
+21	17702 121 14 106 0.085840561985 0.485840561985 5 48 48 240 11520
 vector 22 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211NotRetry(packetSentToPeer)
 attr title "packets sent: without retry, vector(packetBytes)"
+22	17823 144 14 106 0.085840561985 0.485840561985 6 48 48 288 13824
 vector 23 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetDequeued)
 attr title "queueing times, vector"
+23	17967 181 14 106 0.085840561985 0.485840561985 6 4.6e-05 9.0953994e-05 0.000320953994 1.8852629024552e-08
 vector 24 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received from lower layer, vector(packetBytes)"
+24	18148 145 17 109 0.085841038982 0.485841038982 6 48 48 288 13824
 vector 25 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received, vector(packetBytes)"
+25	18293 145 17 109 0.085841038982 0.485841038982 6 48 48 288 13824
 vector 26 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Multicast(packetReceivedFromPeer)
 attr title "packets received: multicast, vector(packetBytes)"
+26	18438 121 17 109 0.085841038982 0.485841038982 5 48 48 240 11520
 vector 27 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Broadcast(packetReceivedFromPeer)
 attr title "packets received: broadcast, vector(packetBytes)"
+27	18559 121 17 109 0.085841038982 0.485841038982 5 48 48 240 11520
 vector 28 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211NotRetry(packetReceivedFromPeer)
 attr title "packets received: without retry, vector(packetBytes)"
+28	18680 145 17 109 0.085841038982 0.485841038982 6 48 48 288 13824
 vector 29 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].agent sentRequest:vector ETV
 attr title "sent requests, vector"
+29	18825 47 20 113 0.180829011113 0.580829011113 2 1 2 3 5
 vector 30 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+30	18872 24 38 38 0.280829011113 0.280829011113 1 32 32 32 1024
 vector 31 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+31	18896 46 38 40 0.280829011113 0.280829011113 2 0 1 1 1
 vector 32 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
 attr interpolationmode none
 attr title "backoff periods, vector"
+32	18942 23 38 38 0.280829011113 0.280829011113 1 9 9 9 81
 vector 33 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(backoffStarted)-count(backoffStopped)
 attr title "backoff active, vector"
+33	18965 46 38 39 0.280829011113 0.280829011113 2 0 1 1 1
 vector 34 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+34	19011 24 40 40 0.280829011113 0.280829011113 1 32 32 32 1024
 vector 35 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+35	19035 23 40 40 0.280829011113 0.280829011113 1 0 0 0 0
 vector 36 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetEnqueued) - count(packetDequeued)"
 attr title "queue length, vector"
+36	19058 46 40 44 0.280829011113 0.280867011113 2 0 1 1 1
 vector 37 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf datarateSelected:vector ETV
 attr interpolationmode none
 attr title "datarates selected, vector"
+37	19104 60 40 58 0.280829011113 0.281343965107 2 24000000 24000000 48000000 1.152e+15
 vector 38 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent to lower layer, vector(packetBytes)"
+38	19164 48 40 60 0.280829011113 0.281353965107 2 14 32 46 1220
 vector 39 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf frameSequenceActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(frameSequenceStarted)-count(frameSequenceFinished)
 attr title "frame sequence active, vector"
+39	19212 46 40 44 0.280829011113 0.280867011113 2 0 1 1 1
 vector 40 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "Radio transmission state, vector"
+40	19258 184 41 66 0.280829011113 0.281387965107 8 0 2 8 12
 vector 41 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent, vector(packetBytes)"
+41	19442 48 44 65 0.280867011113 0.281387965107 2 14 32 46 1220
 vector 42 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Multicast(packetSentToPeer)
 attr title "packets sent: multicast, vector(packetBytes)"
+42	19490 24 44 44 0.280867011113 0.280867011113 1 32 32 32 1024
 vector 43 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Broadcast(packetSentToPeer)
 attr title "packets sent: broadcast , vector(packetBytes)"
+43	19514 24 44 44 0.280867011113 0.280867011113 1 32 32 32 1024
 vector 44 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211NotRetry(packetSentToPeer)
 attr title "packets sent: without retry, vector(packetBytes)"
+44	19538 48 44 65 0.280867011113 0.281387965107 2 14 32 46 1220
 vector 45 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetDequeued)
 attr title "queueing times, vector"
+45	19586 29 44 44 0.280867011113 0.280867011113 1 3.8e-05 3.8e-05 3.8e-05 1.444e-09
 vector 46 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received from lower layer, vector(packetBytes)"
+46	19615 47 47 68 0.28086748811 0.281388442104 2 14 32 46 1220
 vector 47 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received, vector(packetBytes)"
+47	19662 47 47 68 0.28086748811 0.281388442104 2 14 32 46 1220
 vector 48 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Multicast(packetReceivedFromPeer)
 attr title "packets received: multicast, vector(packetBytes)"
+48	19709 23 47 47 0.28086748811 0.28086748811 1 32 32 32 1024
 vector 49 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Broadcast(packetReceivedFromPeer)
 attr title "packets received: broadcast, vector(packetBytes)"
+49	19732 23 47 47 0.28086748811 0.28086748811 1 32 32 32 1024
 vector 50 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211NotRetry(packetReceivedFromPeer)
 attr title "packets received: without retry, vector(packetBytes)"
+50	19755 47 47 68 0.28086748811 0.281388442104 2 14 32 46 1220
 vector 51 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Unicast(packetSentToPeer)
 attr title "packets sent: unicast, vector(packetBytes)"
+51	19802 23 55 55 0.28134348811 0.28134348811 1 48 48 48 2304
 vector 52 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.rx nav:vector ETV
 attr interpolationmode linear
 attr source navChanged
 attr title "network allocation vector, vector"
+52	19825 72 55 64 0.28134348811 0.28138748811 3 0 4.4e-05 4.4e-05 1.936e-09
 vector 53 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Unicast(packetReceivedFromPeer)
 attr title "packets received: unicast, vector(packetBytes)"
+53	19897 24 58 58 0.281343965107 0.281343965107 1 48 48 48 2304
 vector 54 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Unicast(packetSentToPeer)
 attr title "packets sent: unicast, vector(packetBytes)"
+54	19921 24 65 65 0.281387965107 0.281387965107 1 14 14 14 196
 vector 55 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
 attr interpolationmode none
 attr source ieee80211Unicast(packetReceivedFromPeer)
 attr title "packets received: unicast, vector(packetBytes)"
+55	19945 24 68 68 0.281388442104 0.281388442104 1 14 14 14 196
 vector 56 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].agent acceptConfirm:vector ETV
 attr title "accepted confirms, vector"
-0	13729 112 0 66 0 0.281387965107 7 0 3 12 30
-1	13841 30 0 23 0 0.180829011113 2 0 0 0 0
-2	13871 288 0 107 0 0.485840561985 15 0 3 32 82
-3	14159 8 0 0 0 0 1 0 0 0 0
-4	14167 362 0 108 0 0.485841038982 17 0 3 27 63
-5	14529 358 0 107 0 0.485840561985 17 0 3 15 27
-6	14887 9 0 0 0 0 1 31 31 31 961
-7	14896 9 0 0 0 0 1 31 31 31 961
-8	14905 137 8 100 0.085794561985 0.485794561985 6 48 48 288 13824
-9	15042 263 8 102 0.085794561985 0.485794561985 12 0 1 6 6
-10	15305 140 8 100 0.085794561985 0.485794561985 6 3 21 72 1200
-11	15445 274 8 101 0.085794561985 0.485794561985 12 0 1 6 6
-12	15719 144 10 102 0.085794561985 0.485794561985 6 48 48 288 13824
-13	15863 144 10 102 0.085794561985 0.485794561985 6 0 0.00043 0.00043 1.849e-07
-14	16007 277 10 106 0.085794561985 0.485840561985 12 0 1 6 6
-15	16284 180 10 102 0.085794561985 0.485794561985 6 24000000 24000000 144000000 3.456e+15
-16	16464 144 10 102 0.085794561985 0.485794561985 6 48 48 288 13824
-17	16608 277 10 106 0.085794561985 0.485840561985 12 0 1 6 6
-18	16885 552 11 107 0.085794561985 0.485840561985 24 0 2 24 36
-19	17437 144 14 106 0.085840561985 0.485840561985 6 48 48 288 13824
-20	17581 121 14 106 0.085840561985 0.485840561985 5 48 48 240 11520
-21	17702 121 14 106 0.085840561985 0.485840561985 5 48 48 240 11520
-22	17823 144 14 106 0.085840561985 0.485840561985 6 48 48 288 13824
-23	17967 181 14 106 0.085840561985 0.485840561985 6 4.6e-05 9.0953994e-05 0.000320953994 1.8852629024552e-08
-24	18148 145 17 109 0.085841038982 0.485841038982 6 48 48 288 13824
-25	18293 145 17 109 0.085841038982 0.485841038982 6 48 48 288 13824
-26	18438 121 17 109 0.085841038982 0.485841038982 5 48 48 240 11520
-27	18559 121 17 109 0.085841038982 0.485841038982 5 48 48 240 11520
-28	18680 145 17 109 0.085841038982 0.485841038982 6 48 48 288 13824
-29	18825 47 20 113 0.180829011113 0.580829011113 2 1 2 3 5
-30	18872 24 38 38 0.280829011113 0.280829011113 1 32 32 32 1024
-31	18896 46 38 40 0.280829011113 0.280829011113 2 0 1 1 1
-32	18942 23 38 38 0.280829011113 0.280829011113 1 9 9 9 81
-33	18965 46 38 39 0.280829011113 0.280829011113 2 0 1 1 1
-34	19011 24 40 40 0.280829011113 0.280829011113 1 32 32 32 1024
-35	19035 23 40 40 0.280829011113 0.280829011113 1 0 0 0 0
-36	19058 46 40 44 0.280829011113 0.280867011113 2 0 1 1 1
-37	19104 60 40 58 0.280829011113 0.281343965107 2 24000000 24000000 48000000 1.152e+15
-38	19164 48 40 60 0.280829011113 0.281353965107 2 14 32 46 1220
-39	19212 46 40 44 0.280829011113 0.280867011113 2 0 1 1 1
-40	19258 184 41 66 0.280829011113 0.281387965107 8 0 2 8 12
-41	19442 48 44 65 0.280867011113 0.281387965107 2 14 32 46 1220
-42	19490 24 44 44 0.280867011113 0.280867011113 1 32 32 32 1024
-43	19514 24 44 44 0.280867011113 0.280867011113 1 32 32 32 1024
-44	19538 48 44 65 0.280867011113 0.281387965107 2 14 32 46 1220
-45	19586 29 44 44 0.280867011113 0.280867011113 1 3.8e-05 3.8e-05 3.8e-05 1.444e-09
-46	19615 47 47 68 0.28086748811 0.281388442104 2 14 32 46 1220
-47	19662 47 47 68 0.28086748811 0.281388442104 2 14 32 46 1220
-48	19709 23 47 47 0.28086748811 0.28086748811 1 32 32 32 1024
-49	19732 23 47 47 0.28086748811 0.28086748811 1 32 32 32 1024
-50	19755 47 47 68 0.28086748811 0.281388442104 2 14 32 46 1220
-51	19802 23 55 55 0.28134348811 0.28134348811 1 48 48 48 2304
-52	19825 72 55 64 0.28134348811 0.28138748811 3 0 4.4e-05 4.4e-05 1.936e-09
-53	19897 24 58 58 0.281343965107 0.281343965107 1 48 48 48 2304
-54	19921 24 65 65 0.281387965107 0.281387965107 1 14 14 14 196
-55	19945 24 68 68 0.281388442104 0.281388442104 1 14 14 14 196
-56	19969 24 113 113 0.580829011113 0.580829011113 1 1 1 1 1
-
+56	19969 25 113 113 0.580829011113 0.580829011113 1 1 1 1 1

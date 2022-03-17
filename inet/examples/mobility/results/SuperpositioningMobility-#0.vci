@@ -1,4 +1,4 @@
-file 10901 1618558038                                           
+file 10901 1647516080                                           
 version 2
 run SuperpositioningMobility-0-20210416-16:27:15-20208
 attr configname SuperpositioningMobility
@@ -72,120 +72,119 @@ vector 0 MobileNetwork.host[0] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+0	7041 154 0 0 0 0 10 0 256.99993243548 1384.9996621774 308844.83987211
 vector 1 MobileNetwork.host[0] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+1	7195 154 0 0 0 0 10 0 254.71224584347 1373.5612292174 303449.19174443
 vector 2 MobileNetwork.host[0] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+2	7349 80 0 0 0 0 10 0 0 0 0
 vector 3 MobileNetwork.host[1] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+3	7429 224 0 0 0 0 12 0 356.99993243548 2612.9993919193 775840.67393367
 vector 4 MobileNetwork.host[1] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+4	7653 224 0 0 0 0 12 0 254.71224584347 1992.4102125912 430135.15696884
 vector 5 MobileNetwork.host[1] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+5	7877 96 0 0 0 0 12 0 0 0 0
 vector 6 MobileNetwork.host[2] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+6	7973 224 0 0 0 0 12 0 306.99993243548 2312.9993919193 592340.70771593
 vector 7 MobileNetwork.host[2] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+7	8197 236 0 0 0 0 12 0 341.31478622191 2512.0254548619 713042.94059995
 vector 8 MobileNetwork.host[2] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+8	8433 96 0 0 0 0 12 0 0 0 0
 vector 9 MobileNetwork.host[3] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+9	8529 223 0 0 0 0 12 0 206.99993243548 1712.9993919193 315340.77528045
 vector 10 MobileNetwork.host[3] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+10	8752 248 0 0 0 0 12 0 341.31478622191 2512.0254548619 713042.94059995
 vector 11 MobileNetwork.host[3] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+11	9000 108 0 0 0 0 12 0 0 0 0
 vector 12 MobileNetwork.host[4] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+12	9108 234 0 0 0 0 12 0 156.99993243548 1412.9993919193 221840.80906271
 vector 13 MobileNetwork.host[4] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+13	9342 236 0 0 0 0 12 0 254.71224584347 1992.4102125912 430135.15696884
 vector 14 MobileNetwork.host[4] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+14	9578 108 0 0 0 0 12 0 0 0 0
 vector 15 MobileNetwork.host[5] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+15	9686 235 0 0 0 0 12 0 206.99993243548 1712.9993919193 315340.77528045
 vector 16 MobileNetwork.host[5] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+16	9921 248 0 0 0 0 12 0 168.10970546502 1472.7949703205 237227.37333771
 vector 17 MobileNetwork.host[5] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+17	10169 108 0 0 0 0 12 0 0 0 0
 vector 18 MobileNetwork.host[6] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+18	10277 236 0 0 0 0 12 0 306.99993243548 2312.9993919193 592340.70771593
 vector 19 MobileNetwork.host[6] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+19	10513 248 0 0 0 0 12 0 168.10970546502 1472.7949703205 237227.37333771
 vector 20 MobileNetwork.host[6] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
+20	10761 108 0 0 0 0 12 0 0 0 0
 vector 21 MobileNetwork.host[7] coordX:vector ETV
 attr interpolationmode linear
 attr source xCoord(mobilityPos(mobilityStateChanged))
 attr title "coord X, vector"
+21	10869 11 0 0 0 0 1 300 300 300 90000
 vector 22 MobileNetwork.host[7] coordY:vector ETV
 attr interpolationmode linear
 attr source yCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Y, vector"
+22	10880 11 0 0 0 0 1 200 200 200 40000
 vector 23 MobileNetwork.host[7] coordZ:vector ETV
 attr interpolationmode linear
 attr source zCoord(mobilityPos(mobilityStateChanged))
 attr title "coord Z, vector"
-0	7041 154 0 0 0 0 10 0 256.99993243548 1384.9996621774 308844.83987211
-1	7195 154 0 0 0 0 10 0 254.71224584347 1373.5612292173 303449.19174442
-2	7349 80 0 0 0 0 10 0 0 0 0
-3	7429 224 0 0 0 0 12 0 356.99993243548 2612.9993919193 775840.67393367
-4	7653 224 0 0 0 0 12 0 254.71224584347 1992.4102125912 430135.15696883
-5	7877 96 0 0 0 0 12 0 0 0 0
-6	7973 224 0 0 0 0 12 0 306.99993243548 2312.9993919193 592340.70771593
-7	8197 236 0 0 0 0 12 0 341.31478622191 2512.0254548619 713042.94059995
-8	8433 96 0 0 0 0 12 0 0 0 0
-9	8529 223 0 0 0 0 12 0 206.99993243548 1712.9993919193 315340.77528045
-10	8752 248 0 0 0 0 12 0 341.31478622191 2512.0254548619 713042.94059995
-11	9000 108 0 0 0 0 12 0 0 0 0
-12	9108 234 0 0 0 0 12 0 156.99993243548 1412.9993919193 221840.80906271
-13	9342 236 0 0 0 0 12 0 254.71224584347 1992.4102125912 430135.15696883
-14	9578 108 0 0 0 0 12 0 0 0 0
-15	9686 235 0 0 0 0 12 0 206.99993243548 1712.9993919193 315340.77528045
-16	9921 248 0 0 0 0 12 0 168.10970546502 1472.7949703205 237227.37333771
-17	10169 108 0 0 0 0 12 0 0 0 0
-18	10277 236 0 0 0 0 12 0 306.99993243548 2312.9993919193 592340.70771593
-19	10513 248 0 0 0 0 12 0 168.10970546502 1472.7949703205 237227.37333771
-20	10761 108 0 0 0 0 12 0 0 0 0
-21	10869 11 0 0 0 0 1 300 300 300 90000
-22	10880 11 0 0 0 0 1 200 200 200 40000
-23	10891 9 0 0 0 0 1 0 0 0 0
-
+23	10891 10 0 0 0 0 1 0 0 0 0

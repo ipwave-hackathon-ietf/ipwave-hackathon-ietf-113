@@ -1,4 +1,4 @@
-file 12305 1619592170                                           
+file 12305 1647516080                                           
 version 2
 run Throughput2-0-20210428-15:40:34-24394
 attr configname Throughput2
@@ -37,223 +37,222 @@ vector 0 Throughput.cliHost[0].wlan.radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+0	9956 38 0 16 0 0.0005 4 0 3 5 13
 vector 1 Throughput.cliHost[0].wlan.radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+1	9994 8 0 0 0 0 1 0 0 0 0
 vector 2 Throughput.cliHost[1].wlan.radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+2	10002 24 0 0 0 0 3 0 2 2 4
 vector 3 Throughput.cliHost[1].wlan.radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+3	10026 8 0 0 0 0 1 0 0 0 0
 vector 4 Throughput.cliHost[2].wlan.radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+4	10034 38 0 19 0 0.0005 4 0 3 5 13
 vector 5 Throughput.cliHost[2].wlan.radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+5	10072 8 0 0 0 0 1 0 0 0 0
 vector 6 Throughput.ap.wlan.radio radioMode:vector ETV
 attr interpolationmode sample-hold
 attr source radioModeChanged
 attr title "Radio mode, vector"
+6	10080 24 0 0 0 0 3 0 2 2 4
 vector 7 Throughput.ap.wlan.radio radioChannel:vector ETV
 attr interpolationmode sample-hold
 attr source radioChannelChanged
 attr title "Radio channel, vector"
+7	10104 8 0 0 0 0 1 0 0 0 0
 vector 8 Throughput.cliHost[0].wlan.radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+8	10112 22 0 16 0 0.0005 2 0 1 1 1
 vector 9 Throughput.cliHost[1].wlan.radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+9	10134 30 0 25 0 0.000500781361 2 1 3 4 10
 vector 10 Throughput.cliHost[2].wlan.radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+10	10164 24 0 19 0 0.0005 2 0 1 1 1
 vector 11 Throughput.ap.wlan.radio receptionState:vector ETV
 attr interpolationmode sample-hold
 attr source receptionStateChanged
 attr title "Radio reception state, vector"
+11	10188 32 0 21 0 0.000500158348 2 1 3 4 10
 vector 12 Throughput.cliHost[0].wlan.mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+12	10220 10 0 0 0 0 1 31 31 31 961
 vector 13 Throughput.cliHost[1].wlan.mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+13	10230 10 0 0 0 0 1 31 31 31 961
 vector 14 Throughput.cliHost[2].wlan.mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+14	10240 10 0 0 0 0 1 31 31 31 961
 vector 15 Throughput.ap.wlan.mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
 attr interpolationmode sample-hold
 attr title "contention window, vector"
+15	10250 10 0 0 0 0 1 31 31 31 961
 vector 16 Throughput.cliHost[0].cli packetSent:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSent
 attr title "packets sent, vector(packetBytes)"
+16	10260 139 1 81 0.0005 0.004 8 1000 1000 8000 8000000
 vector 17 Throughput.cliHost[1].cli packetSent:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSent
 attr title "packets sent, vector(packetBytes)"
+17	10399 139 2 82 0.0005 0.004 8 1000 1000 8000 8000000
 vector 18 Throughput.cliHost[2].cli packetSent:vector(packetBytes) ETV
 attr interpolationmode none
 attr source packetSent
 attr title "packets sent, vector(packetBytes)"
+18	10538 139 3 83 0.0005 0.004 8 1000 1000 8000 8000000
 vector 19 Throughput.cliHost[0].wlan.mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received from upper layer, vector(packetBytes)"
+19	10677 140 10 87 0.0005 0.004 8 1003 1003 8024 8048072
 vector 20 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+20	10817 140 10 87 0.0005 0.004 8 1031 1031 8248 8503688
 vector 21 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+21	10957 131 10 87 0.0005 0.004 9 0 7 29 141
 vector 22 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
 attr interpolationmode none
 attr title "backoff periods, vector"
+22	11088 15 10 10 0.0005 0.0005 1 7 7 7 49
 vector 23 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.contention backoffActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(backoffStarted)-count(backoffStopped)
 attr title "backoff active, vector"
+23	11103 30 10 13 0.0005 0.0005 2 0 1 1 1
 vector 24 Throughput.cliHost[1].wlan.mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received from upper layer, vector(packetBytes)"
+24	11133 140 11 88 0.0005 0.004 8 1003 1003 8024 8048072
 vector 25 Throughput.cliHost[1].wlan.mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+25	11273 140 11 88 0.0005 0.004 8 1031 1031 8248 8503688
 vector 26 Throughput.cliHost[1].wlan.mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+26	11413 116 11 88 0.0005 0.004 8 1 8 36 204
 vector 27 Throughput.cliHost[1].wlan.mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
 attr interpolationmode none
 attr title "backoff periods, vector"
+27	11529 16 11 11 0.0005 0.0005 1 23 23 23 529
 vector 28 Throughput.cliHost[1].wlan.mac.dcf.channelAccess.contention backoffActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(backoffStarted)-count(backoffStopped)
 attr title "backoff active, vector"
+28	11545 38 11 25 0.0005 0.000500781361 2 0 1 1 1
 vector 29 Throughput.cliHost[2].wlan.mac packetReceivedFromUpper:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets received from upper layer, vector(packetBytes)"
+29	11583 140 12 89 0.0005 0.004 8 1003 1003 8024 8048072
 vector 30 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet pushed, vector(packetBytes)"
+30	11723 140 12 89 0.0005 0.004 8 1031 1031 8248 8503688
 vector 31 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
 attr title "queue length, vector"
+31	11863 131 12 89 0.0005 0.004 9 0 7 29 141
 vector 32 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
 attr interpolationmode none
 attr title "backoff periods, vector"
+32	11994 16 12 12 0.0005 0.0005 1 14 14 14 196
 vector 33 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.contention backoffActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(backoffStarted)-count(backoffStopped)
 attr title "backoff active, vector"
+33	12010 30 12 14 0.0005 0.0005 2 0 1 1 1
 vector 34 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+34	12040 18 15 15 0.0005 0.0005 1 1031 1031 1031 1062961
 vector 35 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+35	12058 15 15 15 0.0005 0.0005 1 0 0 0 0
 vector 36 Throughput.cliHost[0].wlan.mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetEnqueued) - count(packetDequeued)"
 attr title "queue length, vector"
+36	12073 15 15 15 0.0005 0.0005 1 1 1 1 1
 vector 37 Throughput.cliHost[0].wlan.mac.dcf datarateSelected:vector ETV
 attr interpolationmode none
 attr title "datarates selected, vector"
+37	12088 21 15 15 0.0005 0.0005 1 1000000 1000000 1000000 1000000000000
 vector 38 Throughput.cliHost[0].wlan.mac packetSentToLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent to lower layer, vector(packetBytes)"
+38	12109 18 15 15 0.0005 0.0005 1 1031 1031 1031 1062961
 vector 39 Throughput.cliHost[0].wlan.mac.dcf frameSequenceActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(frameSequenceStarted)-count(frameSequenceFinished)
 attr title "frame sequence active, vector"
+39	12127 15 15 15 0.0005 0.0005 1 1 1 1 1
 vector 40 Throughput.cliHost[0].wlan.radio transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "Radio transmission state, vector"
+40	12142 30 16 17 0.0005 0.0005 2 1 2 3 5
 vector 41 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packet popped, vector(packetBytes)"
+41	12172 18 18 18 0.0005 0.0005 1 1031 1031 1031 1062961
 vector 42 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
 attr interpolationmode none
 attr source queueingTime(packetPopped)
 attr title "queueing times, vector"
 attr unit s
+42	12190 15 18 18 0.0005 0.0005 1 0 0 0 0
 vector 43 Throughput.cliHost[2].wlan.mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
 attr interpolationmode sample-hold
 attr source "count(packetEnqueued) - count(packetDequeued)"
 attr title "queue length, vector"
+43	12205 15 18 18 0.0005 0.0005 1 1 1 1 1
 vector 44 Throughput.cliHost[2].wlan.mac.dcf datarateSelected:vector ETV
 attr interpolationmode none
 attr title "datarates selected, vector"
+44	12220 21 18 18 0.0005 0.0005 1 1000000 1000000 1000000 1000000000000
 vector 45 Throughput.cliHost[2].wlan.mac packetSentToLower:vector(packetBytes) ETV
 attr interpolationmode none
 attr title "packets sent to lower layer, vector(packetBytes)"
+45	12241 18 18 18 0.0005 0.0005 1 1031 1031 1031 1062961
 vector 46 Throughput.cliHost[2].wlan.mac.dcf frameSequenceActive:vector ETV
 attr interpolationmode sample-hold
 attr source count(frameSequenceStarted)-count(frameSequenceFinished)
 attr title "frame sequence active, vector"
+46	12259 15 18 18 0.0005 0.0005 1 1 1 1 1
 vector 47 Throughput.cliHost[2].wlan.radio transmissionState:vector ETV
 attr interpolationmode sample-hold
 attr source transmissionStateChanged
 attr title "Radio transmission state, vector"
-0	9956 38 0 16 0 0.0005 4 0 3 5 13
-1	9994 8 0 0 0 0 1 0 0 0 0
-2	10002 24 0 0 0 0 3 0 2 2 4
-3	10026 8 0 0 0 0 1 0 0 0 0
-4	10034 38 0 19 0 0.0005 4 0 3 5 13
-5	10072 8 0 0 0 0 1 0 0 0 0
-6	10080 24 0 0 0 0 3 0 2 2 4
-7	10104 8 0 0 0 0 1 0 0 0 0
-8	10112 22 0 16 0 0.0005 2 0 1 1 1
-9	10134 30 0 25 0 0.000500781361 2 1 3 4 10
-10	10164 24 0 19 0 0.0005 2 0 1 1 1
-11	10188 32 0 21 0 0.000500158348 2 1 3 4 10
-12	10220 10 0 0 0 0 1 31 31 31 961
-13	10230 10 0 0 0 0 1 31 31 31 961
-14	10240 10 0 0 0 0 1 31 31 31 961
-15	10250 10 0 0 0 0 1 31 31 31 961
-16	10260 139 1 81 0.0005 0.004 8 1000 1000 8000 8000000
-17	10399 139 2 82 0.0005 0.004 8 1000 1000 8000 8000000
-18	10538 139 3 83 0.0005 0.004 8 1000 1000 8000 8000000
-19	10677 140 10 87 0.0005 0.004 8 1003 1003 8024 8048072
-20	10817 140 10 87 0.0005 0.004 8 1031 1031 8248 8503688
-21	10957 131 10 87 0.0005 0.004 9 0 7 29 141
-22	11088 15 10 10 0.0005 0.0005 1 7 7 7 49
-23	11103 30 10 13 0.0005 0.0005 2 0 1 1 1
-24	11133 140 11 88 0.0005 0.004 8 1003 1003 8024 8048072
-25	11273 140 11 88 0.0005 0.004 8 1031 1031 8248 8503688
-26	11413 116 11 88 0.0005 0.004 8 1 8 36 204
-27	11529 16 11 11 0.0005 0.0005 1 23 23 23 529
-28	11545 38 11 25 0.0005 0.000500781361 2 0 1 1 1
-29	11583 140 12 89 0.0005 0.004 8 1003 1003 8024 8048072
-30	11723 140 12 89 0.0005 0.004 8 1031 1031 8248 8503688
-31	11863 131 12 89 0.0005 0.004 9 0 7 29 141
-32	11994 16 12 12 0.0005 0.0005 1 14 14 14 196
-33	12010 30 12 14 0.0005 0.0005 2 0 1 1 1
-34	12040 18 15 15 0.0005 0.0005 1 1031 1031 1031 1062961
-35	12058 15 15 15 0.0005 0.0005 1 0 0 0 0
-36	12073 15 15 15 0.0005 0.0005 1 1 1 1 1
-37	12088 21 15 15 0.0005 0.0005 1 1000000 1000000 1000000 1000000000000
-38	12109 18 15 15 0.0005 0.0005 1 1031 1031 1031 1062961
-39	12127 15 15 15 0.0005 0.0005 1 1 1 1 1
-40	12142 30 16 17 0.0005 0.0005 2 1 2 3 5
-41	12172 18 18 18 0.0005 0.0005 1 1031 1031 1031 1062961
-42	12190 15 18 18 0.0005 0.0005 1 0 0 0 0
-43	12205 15 18 18 0.0005 0.0005 1 1 1 1 1
-44	12220 21 18 18 0.0005 0.0005 1 1000000 1000000 1000000 1000000000000
-45	12241 18 18 18 0.0005 0.0005 1 1031 1031 1031 1062961
-46	12259 15 18 18 0.0005 0.0005 1 1 1 1 1
-47	12274 30 19 20 0.0005 0.0005 2 1 2 3 5
-
+47	12274 31 19 20 0.0005 0.0005 2 1 2 3 5
