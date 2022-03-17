@@ -1,0 +1,61 @@
+version 2
+run LinearMobility-0-20210428-15:06:09-23934
+attr configname LinearMobility
+attr datetime 20210428-15:06:09
+attr experiment LinearMobility
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MobileNetwork
+attr processid 23934
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.host*.mobility.typename "\"LinearMobility\""
+param **.host*.mobility.initFromDisplayString false
+param **.host*.mobility.speed 50mps
+param **.host*.mobility.angle 30deg
+param *.numHosts 2
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.updateInterval 0.1s
+param **.mobility.initFromDisplayString false
+
+vector 0 MobileNetwork.host[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 1 MobileNetwork.host[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 2 MobileNetwork.host[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 3 MobileNetwork.host[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 4 MobileNetwork.host[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 5 MobileNetwork.host[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+0	0	0	329.28810138255
+1	0	0	237.13784655556
+2	0	0	0
+3	0	0	361.65802222677
+4	0	0	343.1782479398
+5	0	0	0
+

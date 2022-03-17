@@ -1,0 +1,191 @@
+file 10901 1618558038                                           
+version 2
+run SuperpositioningMobility-0-20210416-16:27:15-20208
+attr configname SuperpositioningMobility
+attr datetime 20210416-16:27:15
+attr experiment SuperpositioningMobility
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MobileNetwork
+attr processid 20208
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.numHosts 8
+param *.hasVisualizer true
+param *.visualizer.mobilityVisualizer.moduleFilter "\"**.mobility\""
+param *.visualizer.mobilityVisualizer.displayMovementTrails true
+param *.visualizer.mobilityVisualizer.displayOrientations true
+param *.visualizer.mobilityVisualizer.displayVelocities true
+param **.host[7].mobility.typename "\"StationaryMobility\""
+param **.host[7].mobility.initialX 300m
+param **.host[7].mobility.initialY 200m
+param **.host[7].mobility.initialZ 0m
+param **.host[*].mobility.typename "\"SuperpositioningMobility\""
+param **.host[*].mobility.numElements 4
+param **.host[*].mobility.element[0].typename "\"StaticConcentricMobility\""
+param **.host[*].mobility.element[0].subjectModule "\"^.^\""
+param **.host[*].mobility.element[0].numHosts 7
+param **.host[0].mobility.element[1].typename "\"CircleMobility\""
+param **.host[0].mobility.element[1].faceForward false
+param **.host[0].mobility.element[1].cx 300m
+param **.host[0].mobility.element[1].cy 200m
+param **.host[0].mobility.element[1].r 150m
+param **.host[0].mobility.element[1].speed 40mps
+param **.host[*].mobility.element[1].typename "\"AttachedMobility\""
+param **.host[*].mobility.element[1].mobilityModule "\"^.^.^.host[0].mobility.element[1]\""
+param **.host[*].mobility.element[2].typename "\"MassMobility\""
+param **.host[*].mobility.element[2].faceForward false
+param **.host[*].mobility.element[2].initFromDisplayString false
+param **.host[*].mobility.element[2].initialX 0m
+param **.host[*].mobility.element[2].initialY 0m
+param **.host[*].mobility.element[2].initialZ 0m
+param **.host[*].mobility.element[2].constraintAreaMinX 0m
+param **.host[*].mobility.element[2].constraintAreaMinY 0m
+param **.host[*].mobility.element[2].constraintAreaMaxX 50m
+param **.host[*].mobility.element[2].constraintAreaMaxY 50m
+param **.host[*].mobility.element[2].changeInterval "truncnormal(2s, 1s)"
+param **.host[*].mobility.element[2].angleDelta "normal(0deg, 30deg)"
+param **.host[*].mobility.element[2].speed "truncnormal(10mps, 3mps)"
+param **.host[*].mobility.element[3].typename "\"FacingMobility\""
+param **.host[*].mobility.element[3].initFromDisplayString false
+param **.host[*].mobility.element[3].initialX 0m
+param **.host[*].mobility.element[3].initialY 0m
+param **.host[*].mobility.element[3].initialZ 0m
+param **.host[*].mobility.element[3].sourceMobility "\"^\""
+param **.host[*].mobility.element[3].targetMobility "\"^.^.^.host[7].mobility\""
+param *.numHosts 2
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.updateInterval 0.1s
+param **.mobility.initFromDisplayString false
+
+vector 0 MobileNetwork.host[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 1 MobileNetwork.host[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 2 MobileNetwork.host[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 3 MobileNetwork.host[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 4 MobileNetwork.host[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 5 MobileNetwork.host[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 6 MobileNetwork.host[2] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 7 MobileNetwork.host[2] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 8 MobileNetwork.host[2] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 9 MobileNetwork.host[3] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 10 MobileNetwork.host[3] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 11 MobileNetwork.host[3] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 12 MobileNetwork.host[4] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 13 MobileNetwork.host[4] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 14 MobileNetwork.host[4] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 15 MobileNetwork.host[5] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 16 MobileNetwork.host[5] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 17 MobileNetwork.host[5] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 18 MobileNetwork.host[6] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 19 MobileNetwork.host[6] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 20 MobileNetwork.host[6] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+vector 21 MobileNetwork.host[7] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 22 MobileNetwork.host[7] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 23 MobileNetwork.host[7] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+0	7041 154 0 0 0 0 10 0 256.99993243548 1384.9996621774 308844.83987211
+1	7195 154 0 0 0 0 10 0 254.71224584347 1373.5612292173 303449.19174442
+2	7349 80 0 0 0 0 10 0 0 0 0
+3	7429 224 0 0 0 0 12 0 356.99993243548 2612.9993919193 775840.67393367
+4	7653 224 0 0 0 0 12 0 254.71224584347 1992.4102125912 430135.15696883
+5	7877 96 0 0 0 0 12 0 0 0 0
+6	7973 224 0 0 0 0 12 0 306.99993243548 2312.9993919193 592340.70771593
+7	8197 236 0 0 0 0 12 0 341.31478622191 2512.0254548619 713042.94059995
+8	8433 96 0 0 0 0 12 0 0 0 0
+9	8529 223 0 0 0 0 12 0 206.99993243548 1712.9993919193 315340.77528045
+10	8752 248 0 0 0 0 12 0 341.31478622191 2512.0254548619 713042.94059995
+11	9000 108 0 0 0 0 12 0 0 0 0
+12	9108 234 0 0 0 0 12 0 156.99993243548 1412.9993919193 221840.80906271
+13	9342 236 0 0 0 0 12 0 254.71224584347 1992.4102125912 430135.15696883
+14	9578 108 0 0 0 0 12 0 0 0 0
+15	9686 235 0 0 0 0 12 0 206.99993243548 1712.9993919193 315340.77528045
+16	9921 248 0 0 0 0 12 0 168.10970546502 1472.7949703205 237227.37333771
+17	10169 108 0 0 0 0 12 0 0 0 0
+18	10277 236 0 0 0 0 12 0 306.99993243548 2312.9993919193 592340.70771593
+19	10513 248 0 0 0 0 12 0 168.10970546502 1472.7949703205 237227.37333771
+20	10761 108 0 0 0 0 12 0 0 0 0
+21	10869 11 0 0 0 0 1 300 300 300 90000
+22	10880 11 0 0 0 0 1 200 200 200 40000
+23	10891 9 0 0 0 0 1 0 0 0 0
+

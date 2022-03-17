@@ -1,0 +1,109 @@
+file 3946 1624329360                                            
+version 2
+run MassMobilityWithScenario-0-20210622-11:35:58-27863
+attr configname MassMobilityWithScenario
+attr datetime 20210622-11:35:58
+attr experiment MassMobilityWithScenario
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MobileNetworkWithScenario
+attr processid 27863
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.numHosts 5
+param **.host*.mobility.typename "\"MassMobility\""
+param **.host*.mobility.initFromDisplayString false
+param **.host*.mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.host*.mobility.angleDelta "normal(0deg, 30deg)"
+param **.host*.mobility.speed "truncnormal(15mps, 5mps)"
+param **.scenarioManager.script "xmldoc(\"scenario.xml\")"
+param *.numHosts 2
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.updateInterval 0.1s
+param **.mobility.initFromDisplayString false
+
+vector 0 MobileNetworkWithScenario.host[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+0	3681 22 0 0 0 0 1 329.28810138255 329.28810138255 329.28810138255 108430.65371212
+vector 1 MobileNetworkWithScenario.host[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+1	3703 22 0 0 0 0 1 237.13784655556 237.13784655556 237.13784655556 56234.358269008
+vector 2 MobileNetworkWithScenario.host[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+2	3725 8 0 0 0 0 1 0 0 0 0
+vector 3 MobileNetworkWithScenario.host[1] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+3	3733 22 0 0 0 0 1 361.65802222677 361.65802222677 361.65802222677 130796.52504098
+vector 4 MobileNetworkWithScenario.host[1] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+4	3755 21 0 0 0 0 1 343.1782479398 343.1782479398 343.1782479398 117771.30985903
+vector 5 MobileNetworkWithScenario.host[1] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+5	3776 8 0 0 0 0 1 0 0 0 0
+vector 6 MobileNetworkWithScenario.host[2] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+6	3784 22 0 0 0 0 1 254.19287807308 254.19287807308 254.19287807308 64614.019263076
+vector 7 MobileNetworkWithScenario.host[2] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+7	3806 22 0 0 0 0 1 249.42547855899 249.42547855899 249.42547855899 62213.069354381
+vector 8 MobileNetworkWithScenario.host[2] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+8	3828 8 0 0 0 0 1 0 0 0 0
+vector 9 MobileNetworkWithScenario.host[3] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+9	3836 22 0 0 0 0 1 262.55232598633 262.55232598633 262.55232598633 68933.723880832
+vector 10 MobileNetworkWithScenario.host[3] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+10	3858 23 0 0 0 0 1 119.01384210214 119.01384210214 119.01384210214 14164.294611913
+vector 11 MobileNetworkWithScenario.host[3] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+11	3881 9 0 0 0 0 1 0 0 0 0
+vector 12 MobileNetworkWithScenario.host[4] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+12	3890 23 0 0 0 0 1 578.19765843451 578.19765843451 578.19765843451 334312.53221915
+vector 13 MobileNetworkWithScenario.host[4] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+13	3913 23 0 0 0 0 1 109.06251780689 109.06251780689 109.06251780689 11894.632790378
+vector 14 MobileNetworkWithScenario.host[4] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+14	3936 10 0 0 0 0 1 0 0 0 0

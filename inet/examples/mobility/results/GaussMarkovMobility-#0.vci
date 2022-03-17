@@ -1,0 +1,60 @@
+file 9651793 1618540092                                         
+version 2
+run GaussMarkovMobility-0-20210416-11:28:00-14253
+attr configname GaussMarkovMobility
+attr datetime 20210416-11:28:00
+attr experiment GaussMarkovMobility
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MobileNetwork
+attr processid 14253
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.numHosts 1
+param **.host*.mobility.typename "\"GaussMarkovMobility\""
+param **.host*.mobility.alpha 0.9
+param **.host*.mobility.speed 10mps
+param **.host*.mobility.speedStdDev 40mps
+param **.host*.mobility.angle 0deg
+param **.host*.mobility.angleStdDev 40deg
+param **.host*.mobility.margin 30m
+param *.numHosts 2
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.updateInterval 0.1s
+param **.mobility.initFromDisplayString false
+
+vector 0 MobileNetwork.host[0] coordX:vector ETV
+attr interpolationmode linear
+attr source xCoord(mobilityPos(mobilityStateChanged))
+attr title "coord X, vector"
+vector 1 MobileNetwork.host[0] coordY:vector ETV
+attr interpolationmode linear
+attr source yCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Y, vector"
+vector 2 MobileNetwork.host[0] coordZ:vector ETV
+attr interpolationmode linear
+attr source zCoord(mobilityPos(mobilityStateChanged))
+attr title "coord Z, vector"
+0	1468 983546 0 32767 0 3276.7 32768 0.00035244755599706 599.99830275011 11186432.559835 4901038653.8337
+1	985014 983692 0 32767 0 3276.7 32768 0.0015000957135953 399.99911823319 7819164.4500017 2418454585.7315
+2	1968706 528292 0 32767 0 3276.7 32768 0 0 0 0
+0	2496998 1005781 32768 65535 3276.8 6553.5 32768 0.0094627734597452 599.99999283413 11615181.914018 5055786384.7429
+1	3502779 1005772 32768 65535 3276.8 6553.5 32768 0.0010656607928468 399.99062925165 6964806.9762253 2016717761.7933
+2	4508551 550502 32768 65535 3276.8 6553.5 32768 0 0 0 0
+0	5059053 1005746 65536 98303 6553.6 9830.3 32768 0.012304179976127 599.99860996581 10599238.560915 4086522322.1445
+1	6064799 1005924 65536 98303 6553.6 9830.3 32768 0.0034508915359766 399.99500334469 7132671.8195846 2131363738.0408
+2	7070723 550502 65536 98303 6553.6 9830.3 32768 0 0 0 0
+0	7621225 789251 98304 122541 9830.4 12254.1 24238 0.0020978379943699 599.9997027667 7029198.3343793 2792088741.2667
+1	8410476 789034 98304 122541 9830.4 12254.1 24238 0.029287409990502 399.99752772353 6214065.7446636 1904023308.8318
+2	9199510 452282 98304 122541 9830.4 12254.1 24238 0 0 0 0
+

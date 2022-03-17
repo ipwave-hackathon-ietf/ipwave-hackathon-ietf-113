@@ -1,0 +1,516 @@
+version 2
+run General-0-20210428-15:37:39-24328
+attr configname General
+attr datetime 20210428-15:37:39
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network WiredAndWirelessHostsWithAP
+attr processid 24328
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.addDefaultRoutes false
+param **.*Host*.numApps 3
+param **.*Host*.app[0].typename "\"UdpEchoApp\""
+param **.*Host*.app[0].localPort 1000
+param **.*Host*.app[*].typename "\"UdpBasicApp\""
+param **.wiredHost1.app[1].destAddresses "\"wirelessHost1\""
+param **.wiredHost1.app[2].destAddresses "\"wiredHost2\""
+param **.wiredHost2.app[1].destAddresses "\"wirelessHost1\""
+param **.wiredHost2.app[2].destAddresses "\"wiredHost1\""
+param **.wirelessHost1.app[1].destAddresses "\"wiredHost1\""
+param **.wirelessHost1.app[2].destAddresses "\"wiredHost2\""
+param **.*Host*.app[1..].destPort 1000
+param **.*Host*.app[1..].messageLength 100B
+param **.*Host*.app[1..].sendInterval 1s
+param **.*Host*.app[1..].stopTime 300s
+param **.initialZ 0m
+
+vector 0 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 5 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 6 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 7 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 8 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 9 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 10 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 11 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 12 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 13 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 14 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 15 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 16 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 17 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 18 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 19 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 20 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 21 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 22 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 23 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 24 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 25 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 26 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 27 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 28 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 29 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].agent sentRequest:vector ETV
+attr title "sent requests, vector"
+vector 30 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 31 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 32 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 33 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 34 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 35 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 36 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 37 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 38 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 39 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 40 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 41 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 42 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 43 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 44 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 45 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 46 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 47 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 48 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 49 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 50 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 51 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 52 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 53 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 54 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 55 WiredAndWirelessHostsWithAP.accessPoint.wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 56 WiredAndWirelessHostsWithAP.wirelessHost1.wlan[0].agent acceptConfirm:vector ETV
+attr title "accepted confirms, vector"
+0	0	0	0
+0	0	0	0
+0	0	0	2
+0	41	0.280829011113	3
+0	45	0.280867011113	2
+0	61	0.281353965107	3
+0	66	0.281387965107	2
+1	0	0	0
+1	23	0.180829011113	0
+2	0	0	0
+2	0	0	0
+2	0	0	2
+2	11	0.085794561985	3
+2	15	0.085840561985	2
+2	28	0.185794561985	3
+2	32	0.185840561985	2
+2	52	0.28129748811	3
+2	56	0.28134348811	2
+2	73	0.285794561985	3
+2	77	0.285840561985	2
+2	89	0.385794561985	3
+2	93	0.385840561985	2
+2	103	0.485794561985	3
+2	107	0.485840561985	2
+3	0	0	0
+4	0	0	1
+4	13	0.085795038982	3
+4	16	0.085841038982	1
+4	30	0.185795038982	3
+4	33	0.185841038982	1
+4	41	0.280829011113	0
+4	45	0.280867011113	1
+4	54	0.281297965107	3
+4	57	0.281343965107	1
+4	61	0.281353965107	0
+4	66	0.281387965107	1
+4	75	0.285795038982	3
+4	78	0.285841038982	1
+4	91	0.385795038982	3
+4	94	0.385841038982	1
+4	105	0.485795038982	3
+4	108	0.485841038982	1
+5	0	0	1
+5	11	0.085794561985	0
+5	15	0.085840561985	1
+5	28	0.185794561985	0
+5	32	0.185840561985	1
+5	43	0.28082948811	3
+5	46	0.28086748811	1
+5	52	0.28129748811	0
+5	56	0.28134348811	1
+5	63	0.281354442104	3
+5	67	0.281388442104	1
+5	73	0.285794561985	0
+5	77	0.285840561985	1
+5	89	0.385794561985	0
+5	93	0.385840561985	1
+5	103	0.485794561985	0
+5	107	0.485840561985	1
+6	0	0	31
+7	0	0	31
+8	8	0.085794561985	48
+8	25	0.185794561985	48
+8	49	0.28086748811	48
+8	70	0.285794561985	48
+8	86	0.385794561985	48
+8	100	0.485794561985	48
+9	8	0.085794561985	1
+9	10	0.085794561985	0
+9	25	0.185794561985	1
+9	27	0.185794561985	0
+9	49	0.28086748811	1
+9	51	0.28129748811	0
+9	70	0.285794561985	1
+9	72	0.285794561985	0
+9	86	0.385794561985	1
+9	88	0.385794561985	0
+9	100	0.485794561985	1
+9	102	0.485794561985	0
+10	8	0.085794561985	3
+10	25	0.185794561985	7
+10	49	0.28086748811	19
+10	70	0.285794561985	21
+10	86	0.385794561985	18
+10	100	0.485794561985	4
+11	8	0.085794561985	1
+11	9	0.085794561985	0
+11	25	0.185794561985	1
+11	26	0.185794561985	0
+11	49	0.28086748811	1
+11	50	0.28129748811	0
+11	70	0.285794561985	1
+11	71	0.285794561985	0
+11	86	0.385794561985	1
+11	87	0.385794561985	0
+11	100	0.485794561985	1
+11	101	0.485794561985	0
+12	10	0.085794561985	48
+12	27	0.185794561985	48
+12	51	0.28129748811	48
+12	72	0.285794561985	48
+12	88	0.385794561985	48
+12	102	0.485794561985	48
+13	10	0.085794561985	0
+13	27	0.185794561985	0
+13	51	0.28129748811	0.00043
+13	72	0.285794561985	0
+13	88	0.385794561985	0
+13	102	0.485794561985	0
+14	10	0.085794561985	1
+14	14	0.085840561985	0
+14	27	0.185794561985	1
+14	31	0.185840561985	0
+14	51	0.28129748811	1
+14	68	0.281388442104	0
+14	72	0.285794561985	1
+14	76	0.285840561985	0
+14	88	0.385794561985	1
+14	92	0.385840561985	0
+14	102	0.485794561985	1
+14	106	0.485840561985	0
+15	10	0.085794561985	24000000
+15	27	0.185794561985	24000000
+15	51	0.28129748811	24000000
+15	72	0.285794561985	24000000
+15	88	0.385794561985	24000000
+15	102	0.485794561985	24000000
+16	10	0.085794561985	48
+16	27	0.185794561985	48
+16	51	0.28129748811	48
+16	72	0.285794561985	48
+16	88	0.385794561985	48
+16	102	0.485794561985	48
+17	10	0.085794561985	1
+17	14	0.085840561985	0
+17	27	0.185794561985	1
+17	31	0.185840561985	0
+17	51	0.28129748811	1
+17	68	0.281388442104	0
+17	72	0.285794561985	1
+17	76	0.285840561985	0
+17	88	0.385794561985	1
+17	92	0.385840561985	0
+17	102	0.485794561985	1
+17	106	0.485840561985	0
+18	11	0.085794561985	1
+18	12	0.085794561985	2
+18	14	0.085840561985	1
+18	15	0.085840561985	0
+18	28	0.185794561985	1
+18	29	0.185794561985	2
+18	31	0.185840561985	1
+18	32	0.185840561985	0
+18	52	0.28129748811	1
+18	53	0.28129748811	2
+18	55	0.28134348811	1
+18	56	0.28134348811	0
+18	73	0.285794561985	1
+18	74	0.285794561985	2
+18	76	0.285840561985	1
+18	77	0.285840561985	0
+18	89	0.385794561985	1
+18	90	0.385794561985	2
+18	92	0.385840561985	1
+18	93	0.385840561985	0
+18	103	0.485794561985	1
+18	104	0.485794561985	2
+18	106	0.485840561985	1
+18	107	0.485840561985	0
+19	14	0.085840561985	48
+19	31	0.185840561985	48
+19	55	0.28134348811	48
+19	76	0.285840561985	48
+19	92	0.385840561985	48
+19	106	0.485840561985	48
+20	14	0.085840561985	48
+20	31	0.185840561985	48
+20	76	0.285840561985	48
+20	92	0.385840561985	48
+20	106	0.485840561985	48
+21	14	0.085840561985	48
+21	31	0.185840561985	48
+21	76	0.285840561985	48
+21	92	0.385840561985	48
+21	106	0.485840561985	48
+22	14	0.085840561985	48
+22	31	0.185840561985	48
+22	55	0.28134348811	48
+22	76	0.285840561985	48
+22	92	0.385840561985	48
+22	106	0.485840561985	48
+23	14	0.085840561985	4.6e-05
+23	31	0.185840561985	4.6e-05
+23	68	0.281388442104	9.0953994e-05
+23	76	0.285840561985	4.6e-05
+23	92	0.385840561985	4.6e-05
+23	106	0.485840561985	4.6e-05
+24	17	0.085841038982	48
+24	34	0.185841038982	48
+24	58	0.281343965107	48
+24	79	0.285841038982	48
+24	95	0.385841038982	48
+24	109	0.485841038982	48
+25	17	0.085841038982	48
+25	34	0.185841038982	48
+25	58	0.281343965107	48
+25	79	0.285841038982	48
+25	95	0.385841038982	48
+25	109	0.485841038982	48
+26	17	0.085841038982	48
+26	34	0.185841038982	48
+26	79	0.285841038982	48
+26	95	0.385841038982	48
+26	109	0.485841038982	48
+27	17	0.085841038982	48
+27	34	0.185841038982	48
+27	79	0.285841038982	48
+27	95	0.385841038982	48
+27	109	0.485841038982	48
+28	17	0.085841038982	48
+28	34	0.185841038982	48
+28	58	0.281343965107	48
+28	79	0.285841038982	48
+28	95	0.385841038982	48
+28	109	0.485841038982	48
+29	20	0.180829011113	1
+29	113	0.580829011113	2
+30	38	0.280829011113	32
+31	38	0.280829011113	1
+31	40	0.280829011113	0
+32	38	0.280829011113	9
+33	38	0.280829011113	1
+33	39	0.280829011113	0
+34	40	0.280829011113	32
+35	40	0.280829011113	0
+36	40	0.280829011113	1
+36	44	0.280867011113	0
+37	40	0.280829011113	24000000
+37	58	0.281343965107	24000000
+38	40	0.280829011113	32
+38	60	0.281353965107	14
+39	40	0.280829011113	1
+39	44	0.280867011113	0
+40	41	0.280829011113	1
+40	42	0.280829011113	2
+40	44	0.280867011113	1
+40	45	0.280867011113	0
+40	61	0.281353965107	1
+40	62	0.281353965107	2
+40	65	0.281387965107	1
+40	66	0.281387965107	0
+41	44	0.280867011113	32
+41	65	0.281387965107	14
+42	44	0.280867011113	32
+43	44	0.280867011113	32
+44	44	0.280867011113	32
+44	65	0.281387965107	14
+45	44	0.280867011113	3.8e-05
+46	47	0.28086748811	32
+46	68	0.281388442104	14
+47	47	0.28086748811	32
+47	68	0.281388442104	14
+48	47	0.28086748811	32
+49	47	0.28086748811	32
+50	47	0.28086748811	32
+50	68	0.281388442104	14
+51	55	0.28134348811	48
+52	55	0.28134348811	0
+52	55	0.28134348811	4.4e-05
+52	64	0.28138748811	0
+53	58	0.281343965107	48
+54	65	0.281387965107	14
+55	68	0.281388442104	14
+56	113	0.580829011113	1
+

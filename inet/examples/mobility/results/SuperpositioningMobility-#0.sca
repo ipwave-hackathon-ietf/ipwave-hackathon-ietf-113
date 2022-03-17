@@ -1,0 +1,91 @@
+version 2
+run SuperpositioningMobility-0-20210416-16:27:15-20208
+attr configname SuperpositioningMobility
+attr datetime 20210416-16:27:15
+attr experiment SuperpositioningMobility
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network MobileNetwork
+attr processid 20208
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.numHosts 8
+param *.hasVisualizer true
+param *.visualizer.mobilityVisualizer.moduleFilter "\"**.mobility\""
+param *.visualizer.mobilityVisualizer.displayMovementTrails true
+param *.visualizer.mobilityVisualizer.displayOrientations true
+param *.visualizer.mobilityVisualizer.displayVelocities true
+param **.host[7].mobility.typename "\"StationaryMobility\""
+param **.host[7].mobility.initialX 300m
+param **.host[7].mobility.initialY 200m
+param **.host[7].mobility.initialZ 0m
+param **.host[*].mobility.typename "\"SuperpositioningMobility\""
+param **.host[*].mobility.numElements 4
+param **.host[*].mobility.element[0].typename "\"StaticConcentricMobility\""
+param **.host[*].mobility.element[0].subjectModule "\"^.^\""
+param **.host[*].mobility.element[0].numHosts 7
+param **.host[0].mobility.element[1].typename "\"CircleMobility\""
+param **.host[0].mobility.element[1].faceForward false
+param **.host[0].mobility.element[1].cx 300m
+param **.host[0].mobility.element[1].cy 200m
+param **.host[0].mobility.element[1].r 150m
+param **.host[0].mobility.element[1].speed 40mps
+param **.host[*].mobility.element[1].typename "\"AttachedMobility\""
+param **.host[*].mobility.element[1].mobilityModule "\"^.^.^.host[0].mobility.element[1]\""
+param **.host[*].mobility.element[2].typename "\"MassMobility\""
+param **.host[*].mobility.element[2].faceForward false
+param **.host[*].mobility.element[2].initFromDisplayString false
+param **.host[*].mobility.element[2].initialX 0m
+param **.host[*].mobility.element[2].initialY 0m
+param **.host[*].mobility.element[2].initialZ 0m
+param **.host[*].mobility.element[2].constraintAreaMinX 0m
+param **.host[*].mobility.element[2].constraintAreaMinY 0m
+param **.host[*].mobility.element[2].constraintAreaMaxX 50m
+param **.host[*].mobility.element[2].constraintAreaMaxY 50m
+param **.host[*].mobility.element[2].changeInterval "truncnormal(2s, 1s)"
+param **.host[*].mobility.element[2].angleDelta "normal(0deg, 30deg)"
+param **.host[*].mobility.element[2].speed "truncnormal(10mps, 3mps)"
+param **.host[*].mobility.element[3].typename "\"FacingMobility\""
+param **.host[*].mobility.element[3].initFromDisplayString false
+param **.host[*].mobility.element[3].initialX 0m
+param **.host[*].mobility.element[3].initialY 0m
+param **.host[*].mobility.element[3].initialZ 0m
+param **.host[*].mobility.element[3].sourceMobility "\"^\""
+param **.host[*].mobility.element[3].targetMobility "\"^.^.^.host[7].mobility\""
+param *.numHosts 2
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.updateInterval 0.1s
+param **.mobility.initFromDisplayString false
+
+scalar MobileNetwork.host[0].mobility.element[0] x 100
+scalar MobileNetwork.host[0].mobility.element[0] y 100
+scalar MobileNetwork.host[0].mobility.element[0] z 0
+scalar MobileNetwork.host[1].mobility.element[0] x 200
+scalar MobileNetwork.host[1].mobility.element[0] y 100
+scalar MobileNetwork.host[1].mobility.element[0] z 0
+scalar MobileNetwork.host[2].mobility.element[0] x 150
+scalar MobileNetwork.host[2].mobility.element[0] y 186.60254037844
+scalar MobileNetwork.host[2].mobility.element[0] z 0
+scalar MobileNetwork.host[3].mobility.element[0] x 50
+scalar MobileNetwork.host[3].mobility.element[0] y 186.60254037844
+scalar MobileNetwork.host[3].mobility.element[0] z 0
+scalar MobileNetwork.host[4].mobility.element[0] x 0
+scalar MobileNetwork.host[4].mobility.element[0] y 100
+scalar MobileNetwork.host[4].mobility.element[0] z 0
+scalar MobileNetwork.host[5].mobility.element[0] x 50
+scalar MobileNetwork.host[5].mobility.element[0] y 13.397459621556
+scalar MobileNetwork.host[5].mobility.element[0] z 0
+scalar MobileNetwork.host[6].mobility.element[0] x 150
+scalar MobileNetwork.host[6].mobility.element[0] y 13.397459621556
+scalar MobileNetwork.host[6].mobility.element[0] z 0
+

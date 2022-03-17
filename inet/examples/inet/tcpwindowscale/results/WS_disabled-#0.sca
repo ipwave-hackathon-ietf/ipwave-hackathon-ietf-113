@@ -1,0 +1,1317 @@
+version 2
+run WS_disabled-0-20211202-16:18:14-6786
+attr configname WS_disabled
+attr datetime 20211202-16:18:14
+attr experiment WS_disabled
+attr inifile omnetpp_FR2.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network tcpwindowscale_FileRetrieval_2
+attr processid 6786
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.tcp.windowScalingSupport false
+param **.tcp.advertisedWindow 65535
+param **.ip.procDelay 0s
+param **.IPForward false
+param **.server.ppp[*].numOutputHooks 1
+param **.server.ppp[*].outputHook[0].typename "\"ThruputMeter\""
+param **.arp.retryTimeout 1s
+param **.arp.retryCount 3
+param **.arp.cacheTimeout 100s
+param **.ppp[*].queueType "\"DropTailQueue\""
+param **.ppp[*].queue.frameCapacity 100
+param **.startTime 0s
+param **.batchSize 50
+param **.maxInterval 1s
+param **.client.numTcpApps 1
+param **.client.tcpApp[*].typename "\"TcpSessionApp\""
+param **.client.tcpApp[*].localPort 10020
+param **.client.tcpApp[*].connectAddress "\"server\""
+param **.client.tcpApp[*].connectPort 10021
+param **.client.tcpApp[*].tOpen 0s
+param **.client.tcpApp[*].tSend 0s
+param **.client.tcpApp[*].tClose 0s
+param **.client.tcpApp[*].sendScript "\"\""
+param **.server.numTcpApps 1
+param **.server.tcpApp[*].typename "\"TCPSessionApp\""
+param **.server.tcpApp[*].localPort 10021
+param **.server.tcpApp[*].sendBytes 1000MiB
+param **.server.tcpApp[*].active true
+param **.server.tcpApp[*].connectAddress "\"client\""
+param **.server.tcpApp[*].connectPort 10020
+param **.server.tcpApp[*].tOpen 0s
+param **.server.tcpApp[*].tSend 0s
+param **.server.tcpApp[*].tClose 0s
+param **.server.tcpApp[*].sendScript "\"\""
+param **.tcp.advertisedWindow 65535
+param **.tcp.delayedAcksEnabled false
+param **.tcp.nagleEnabled true
+param **.tcp.limitedTransmitEnabled false
+param **.tcp.increasedIWEnabled false
+param **.tcp.sackSupport false
+param **.tcp.windowScalingSupport false
+param **.tcp.timestampSupport false
+param **.tcp.mss 1452
+param **.tcp.tcpAlgorithmClass "\"TCPReno\""
+param **.tcp.recordStats true
+
+scalar tcpwindowscale_FileRetrieval_2.client.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.client.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.client.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue queueLength:max nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "simulated time" 6000
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac full-duplex 1
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "frames/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "frames/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "bits/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "bits/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "rx channel idle (%)" 100
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac "rx channel utilization (%)" 0
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.client.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar tcpwindowscale_FileRetrieval_2.client.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar tcpwindowscale_FileRetrieval_2.client.udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar tcpwindowscale_FileRetrieval_2.client.udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.client.udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar tcpwindowscale_FileRetrieval_2.client.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar tcpwindowscale_FileRetrieval_2.client.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar tcpwindowscale_FileRetrieval_2.server.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.server.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.server.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue queueLength:max nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "simulated time" 6000
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac full-duplex 1
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "frames/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "frames/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "bits/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "bits/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "rx channel idle (%)" 100
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac "rx channel utilization (%)" 0
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.server.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar tcpwindowscale_FileRetrieval_2.server.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar tcpwindowscale_FileRetrieval_2.server.udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar tcpwindowscale_FileRetrieval_2.server.udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.server.udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar tcpwindowscale_FileRetrieval_2.server.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar tcpwindowscale_FileRetrieval_2.server.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar tcpwindowscale_FileRetrieval_2.router1.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue queueLength:max nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "simulated time" 6000
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac full-duplex 1
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "frames/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "frames/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "bits/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "bits/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "rx channel idle (%)" 100
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac "rx channel utilization (%)" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue queueLength:max nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "simulated time" 6000
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac full-duplex 1
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "frames/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "frames/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "bits/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "bits/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "rx channel idle (%)" 100
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac "rx channel utilization (%)" 0
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.eth[1].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router1.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue queueLength:max nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "simulated time" 6000
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac full-duplex 1
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "frames/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "frames/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "bits/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "bits/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "rx channel idle (%)" 100
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac "rx channel utilization (%)" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[0].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetPopped:count 0
+attr interpolationmode none
+attr title "packet popped, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetPopped:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet popped, sum(packetBytes)"
+statistic tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue queueingTime:histogram
+field count 0
+field mean -nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue queueLength:max nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, max"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue queueLength:timeavg -nan
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, timeavg"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetPushed:count 0
+attr interpolationmode none
+attr title "packet pushed, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetPushed:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packet pushed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drops: queue overflow, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetRemoved:count 0
+attr interpolationmode none
+attr title "packets removed, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac.queue packetRemoved:sum(packetBytes) 0
+attr interpolationmode none
+attr title "packets removed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "simulated time" 6000
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac full-duplex 1
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "frames/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "frames/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "bits/sec sent" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "bits/sec rcvd" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "rx channel idle (%)" 100
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac "rx channel utilization (%)" 0
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac rxPkOk:count 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac rxPkOk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac txPk:count 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac txPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetReceivedFromUpper:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].encap decapPk:count 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].encap decapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].encap encapPk:count 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.eth[1].encap encapPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpResolutionCompleted:count 0
+attr title "ARP completed resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpReplySent:count 0
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar tcpwindowscale_FileRetrieval_2.router2.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+
