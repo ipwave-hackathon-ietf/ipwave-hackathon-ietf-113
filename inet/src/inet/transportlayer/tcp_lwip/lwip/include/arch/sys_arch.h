@@ -1,20 +1,3 @@
-#ifndef SYS_ARCH_H
-#define SYS_ARCH_H
-
-namespace inet {
-
-namespace tcp {
-
-typedef void* sys_sem_t;
-typedef void* sys_mbox_t;
-typedef void* sys_thread_t;
-
-#define SYS_SEM_NULL nullptr
-#define SYS_MBOX_NULL nullptr
-
-} // namespace tcp
-
-} // namespace inet
-
-#endif //SYS_ARCH_H
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f12dc9934e367ba3d9129af3acd6e9ed086d49a970f4926c58f6f72d4ab4d38
+size 276

@@ -1,35 +1,3 @@
-//
-// Copyright (C) 2018 OpenSim Ltd.
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program; if not, see <http://www.gnu.org/licenses/>.
-//
-
-#ifndef __INET_UDPDISSECTOR_H
-#define __INET_UDPDISSECTOR_H
-
-#include "inet/common/INETDefs.h"
-#include "inet/common/packet/dissector/ProtocolDissector.h"
-
-namespace inet {
-
-class INET_API UdpProtocolDissector : public ProtocolDissector
-{
-  public:
-    virtual void dissect(Packet *packet, const Protocol *protocol, ICallback& callback) const override;
-};
-
-} // namespace inet
-
-#endif // __INET_UDPDISSECTOR_H
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f3d1096011c2310d9a7b31013ec2584ed7152eb0290d489bcc404cbefb279c8
+size 1122

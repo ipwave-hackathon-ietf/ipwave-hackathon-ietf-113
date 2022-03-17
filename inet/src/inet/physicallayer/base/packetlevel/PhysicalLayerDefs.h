@@ -1,31 +1,3 @@
-//
-// Copyright (C) 2013 OpenSim Ltd.
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program; if not, see <http://www.gnu.org/licenses/>.
-//
-
-#ifndef __INET_PHYSICALLAYERDEFS_H
-#define __INET_PHYSICALLAYERDEFS_H
-
-#include "inet/common/INETMath.h"
-#include "inet/common/Units.h"
-
-namespace inet {
-
-using namespace units::values;
-
-} // namespace inet
-
-#endif // ifndef __INET_PHYSICALLAYERDEFS_H
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe9e2cc0eb2777b6e2ab4c222b59aadef7327a2c6a61fa7b03e4997dc566abeb
+size 964

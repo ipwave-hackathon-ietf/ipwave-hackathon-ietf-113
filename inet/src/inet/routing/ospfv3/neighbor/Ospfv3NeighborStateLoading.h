@@ -1,27 +1,3 @@
-#ifndef __INET_OSPFV3NEIGHBORSTATELOADING_H_
-#define __INET_OSPFV3NEIGHBORSTATELOADING_H_
-
-#include "inet/common/INETDefs.h"
-#include "inet/routing/ospfv3/neighbor/Ospfv3Neighbor.h"
-#include "inet/routing/ospfv3/neighbor/Ospfv3NeighborState.h"
-
-namespace inet {
-namespace ospfv3 {
-
-class INET_API Ospfv3NeighborStateLoading : public Ospfv3NeighborState
-{
-    /*
-     * LSRs are sent to the neighbor for LSAs that have been discovered but not received.
-     */
-  public:
-    ~Ospfv3NeighborStateLoading() {}
-    virtual void processEvent(Ospfv3Neighbor* neighbor, Ospfv3Neighbor::Ospfv3NeighborEventType event) override;
-    virtual Ospfv3Neighbor::Ospfv3NeighborStateType getState() const override { return Ospfv3Neighbor::LOADING_STATE; }
-    virtual std::string getNeighborStateString() override { return std::string("Ospfv3NeighborStateLoading"); }
-};
-
-} // namespace ospfv3
-}//namespace inet
-
-#endif // __INET_OSPFV3NEIGHBORSTATELOADING_H_
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e27ac73e46b859a9dc326f717503336332e24295a220539c8d6b711734da9d8
+size 945

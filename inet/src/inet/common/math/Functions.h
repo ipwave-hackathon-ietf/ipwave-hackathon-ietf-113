@@ -1,24 +1,3 @@
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/.
-//
-
-#ifndef __INET_MATH_FUNCTIONS_H_
-#define __INET_MATH_FUNCTIONS_H_
-
-#include "inet/common/math/PrimitiveFunctions.h"
-#include "inet/common/math/AlgebraicOperations.h"
-#include "inet/common/math/CompoundFunctions.h"
-
-#endif // #ifndef __INET_MATH_FUNCTIONS_H_
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8af62c5ded0674924fd296facbaf4e938c35ad4472b1650da90fa641849a95ec
+size 931

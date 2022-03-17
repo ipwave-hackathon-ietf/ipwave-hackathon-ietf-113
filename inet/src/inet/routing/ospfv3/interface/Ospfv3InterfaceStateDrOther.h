@@ -1,30 +1,3 @@
-#ifndef __INET_OSPFV3INTERFACESTATEDROTHER_H_
-#define __INET_OSPFV3INTERFACESTATEDROTHER_H_
-
-#include <string>
-
-#include "inet/common/INETDefs.h"
-#include "inet/routing/ospfv3/interface/Ospfv3InterfaceState.h"
-
-namespace inet {
-namespace ospfv3 {
-
-/*
- * This router is neither DR nor BDR. The interface is on NBMA Network. It forms adjacencies
- * with both DR and BDR.
- */
-
-class INET_API Ospfv3InterfaceStateDrOther : public Ospfv3InterfaceState
-{
-  public:
-    ~Ospfv3InterfaceStateDrOther() {}
-    virtual void processEvent(Ospfv3Interface* intf, Ospfv3Interface::Ospfv3InterfaceEvent event) override;
-    Ospfv3Interface::Ospfv3InterfaceFaState getState() const override { return Ospfv3Interface::INTERFACE_STATE_DROTHER; }
-    std::string getInterfaceStateString() const override { return std::string("Ospfv3InterfaceStateDrOther"); }
-};
-
-} // namespace ospfv3
-}//namespace inet
-
-#endif // __INET_OSPFV3INTERFACESTATEDROTHER_H_
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cdcba3c2894d914e09a7d7c0189c0e970f0297c00e465d95f1a7ce207c464ef
+size 934

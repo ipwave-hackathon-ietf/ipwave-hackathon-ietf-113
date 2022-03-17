@@ -1,35 +1,3 @@
-//
-// Copyright (C) 2018 OpenSim Ltd.
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program; if not, see <http://www.gnu.org/licenses/>.
-//
-
-#ifndef __INET_WISEDISSECTOR_H
-#define __INET_WISEDISSECTOR_H
-
-#include "inet/common/INETDefs.h"
-#include "inet/common/packet/dissector/ProtocolDissector.h"
-
-namespace inet {
-
-class INET_API WiseRouteProtocolDissector : public ProtocolDissector
-{
-  public:
-    virtual void dissect(Packet *packet, const Protocol *protocol, ICallback& callback) const override;
-};
-
-} // namespace inet
-
-#endif // __INET_WISEDISSECTOR_H
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d28f540df4ce7ea5325acc11e647ce1d0933b1c73cc4a4c4338a503e3aebd9a1
+size 1131

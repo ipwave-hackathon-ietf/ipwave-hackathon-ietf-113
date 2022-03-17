@@ -1,29 +1,3 @@
-#ifndef __INET_INTERVALTREETEST_H
-#define __INET_INTERVALTREETEST_H
-
-#include "inet/common/IntervalTree.h"
-
-namespace inet {
-
-class IntervalTreeTest
-{
-  protected:
-    std::vector<IntervalTree::Interval *> intervals;
-    IntervalTree tree;
-
-  protected:
-    void insertNodes(int nodeCount);
-    void deleteNodes();
-
-    void checkTree();
-    void checkNil();
-    int checkNode(IntervalTree::Node* n);
-
-  public:
-    void run(int nodeCount);
-};
-
-} // namespace inet
-
-#endif // ifndef __INET_INTERVALTREETEST_H
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:13be4afa2ef4ef94c299a249e7a8a59b78412c4a2086ce6e937409f204a3d5f0
+size 510

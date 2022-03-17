@@ -1,7 +1,3 @@
-//
-// Generated file, do not edit!
-//
-// This file defines symbols contributed by the currently active project features,
-// and it is regenerated every time a project feature is enabled or disabled.
-// See the Project Features dialog in the IDE, and opp_featuretool.
-//
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e25166dda3a46dba9a79b52c8f74334ea5fb30cbcc2e17611eaa2dfcd9aca95
+size 270

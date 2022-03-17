@@ -1,34 +1,3 @@
-//
-//                  Simu5G
-//
-// Authors: Giovanni Nardini, Giovanni Stea, Antonio Virdis (University of Pisa)
-//
-// This file is part of a software released under the license included in file
-// "license.pdf". Please read LICENSE and README files before using it.
-// The above files and the present reference are part of the software itself,
-// and cannot be removed from it.
-//
-
-#ifndef LTEMAXCIMULTIBAND_H_
-#define LTEMAXCIMULTIBAND_H_
-
-#include "stack/mac/scheduler/LteScheduler.h"
-
-    typedef SortedDesc<MacCid, unsigned int> ScoreDesc;
-    typedef std::priority_queue<ScoreDesc> ScoreList;
-
-class LteMaxCiMultiband : public virtual LteScheduler
-{
-
-
-public:
-    LteMaxCiMultiband(){ }
-    virtual ~LteMaxCiMultiband() {};
-
-    virtual void prepareSchedule();
-
-    virtual void commitSchedule();
-};
-
-
-#endif /* LTEMAXCIMULTIBAND_H_ */
+version https://git-lfs.github.com/spec/v1
+oid sha256:44dd1df2ae11ab5c29e5edb464c1d36894b267290448112a625214c415b592f0
+size 843
