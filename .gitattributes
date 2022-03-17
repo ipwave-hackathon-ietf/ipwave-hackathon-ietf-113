@@ -1,2 +1,7 @@
+.vec filter=lfs diff=lfs merge=lfs -text
+h filter=lfs diff=lfs merge=lfs -text
+.gch filter=lfs diff=lfs merge=lfs -text
 .so filter=lfs diff=lfs merge=lfs -text
+.h filter=lfs diff=lfs merge=lfs -text
+.h.gch filter=lfs diff=lfs merge=lfs -text
 *.so filter=lfs diff=lfs merge=lfs -text
